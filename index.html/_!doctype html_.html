@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CDVerse · Artist</title>
+  <!-- Tailwind CDN (quick start) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white antialiased">
+  <!-- HERO -->
+  <header class="min-h-screen flex items-center justify-center p-6">
+    <div class="max-w-4xl text-center">
+      <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight mb-4">CDVerse</h1>
+      <p class="text-lg sm:text-xl mb-6">Artist · Creator · Movement — Create Your World</p>
+      <div class="flex gap-3 justify-center">
+        <a href="#music" class="px-6 py-3 bg-white text-black rounded">Listen</a>
+        <a href="#media" class="px-6 py-3 border border-white rounded">Watch</a>
+        <a href="#cyw" class="px-6 py-3 border border-white rounded">Explore CYW</a>
+      </div>whe
+    </div>
+  </header>
+
+  <!-- MUSIC -->
+  <section id="music" class="py-16 px-6 bg-[#070707]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Latest Release</h2>
+      <div class="mb-6">
+        <!-- Spotify embed example -->
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/ALBUM_ID" width="100%" height="152" frameborder="0" allow="encrypted-media"></iframe>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="#" class="p-4 border rounded">Spotify</a>
+        <a href="#" class="p-4 border rounded">Apple Music</a>
+        <a href="#" class="p-4 border rounded">YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CYW / Sports -->
+  <section id="cyw" class="py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Create Your World</h2>
+      <p class="mb-4">Short intro to CYW — music, movement and lifestyle.</p>
+      <!-- Example media -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <img src="assets/photo1.jpg" alt="" class="rounded object-cover w-full h-48" />
+        <img src="assets/photo2.jpg" alt="" class="rounded object-cover w-full h-48" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT (Netlify form) -->
+  <section id="contact" class="py-12 px-6 bg-[#0b0b0b]">
+    <div class="max-w-2xl mx-auto">
+      <h3 class="text-2xl font-bold mb-3">Contact / Bookings</h3>
+      <form name="contact" method="POST" data-netlify="true" class="grid gap-3">
+        <input type="hidden" name="form-name" value="contact" />
+        <input name="name" required placeholder="Name" class="p-3 bg-[#111] rounded" />
+        <input name="email" type="email" required placeholder="Email" class="p-3 bg-[#111] rounded" />
+        <textarea name="message" rows="5" required placeholder="Message" class="p-3 bg-[#111] rounded"></textarea>
+        <button type="submit" class="px-5 py-3 bg-white text-black rounded">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-6 text-center text-sm">
+    © <span id="year"></span> C-Diverse / CDVerse
+  </footer>
+
+  <script>document.getElementById('year').innerText = new Date().getFullYear();</script>
+</body>
+</html>
