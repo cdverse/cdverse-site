@@ -90,6 +90,16 @@
         background: transparent;
       }
 
+      /* Specific smaller variant for CYW image */
+      .section-card.small {
+        width: 9rem; /* fallback for non-tailwind contexts */
+      }
+
+      .section-card.small img {
+        max-width: 180px;
+        height: auto;
+      }
+
       .section-label {
         position: absolute;
         left: 0;
@@ -175,7 +185,7 @@
             <div class="section-label">Music & Releases</div>
           </div>
 
-          <div class="section-card w-48 sm:w-56 md:w-64">
+          <div class="section-card w-36 sm:w-40 md:w-44 small">
             <img src="assets/CYW.png" alt="Lifestyle" class="section-img" />
             <div class="section-label">Lifestyle</div>
           </div>
