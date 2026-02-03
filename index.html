@@ -12,20 +12,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CDVerse · Artist</title>
-    .section-img {
-      max-width: 400px;      /* ensures images aren't too large */
-      width: 90%;             /* responsive on smaller screens */
-      height: auto;
-      display: block;
-      margin: 0 auto;         /* centers images */
-      border-radius: 12px;    /* optional: rounded corners */
-      box-shadow: 0 0 30px rgba(65,105,225,0.5); /* glow effect */
-      transition: transform 0.7s ease; /* smooth hover effect */
-    }
 
-    .section-img:hover {
-      transform: scale(1.05); /* subtle zoom on hover */
-    }
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Background gradient animation */
+      body {
+        background: linear-gradient(270deg, #000000, #111111, #4169e1);
+        background-size: 600% 600%;
+        animation: gradientFade 30s ease infinite;
+        color: white;
+        font-family: 'Inter', sans-serif;
+      }
+
+      @keyframes gradientFade {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      /* Hero glowing text */
+      @keyframes textGlow {
+        0%, 100% { text-shadow: 0 0 0 rgba(65,105,225,0.5), 0 0 0 rgba(255,255,255,0.2); }
+        50% { text-shadow: 0 0 20px rgba(65,105,225,0.7), 0 0 40px rgba(255,255,255,0.4); }
+      }
+
+      #hero-title {
+        font-size: 4rem;
+        font-weight: 900;
+        text-align: center;
+        animation: textGlow 6s ease-in-out infinite;
+        margin-bottom: 1rem;
+      }
+
+      #hero-subtext {
+        font-size: 1.5rem;
+        text-align: center;
+        color: #ccc;
+        animation: textGlow 6s ease-in-out infinite;
+        margin-bottom: 2rem;
+      }
+
+      /* Album cover hover */
+      .album-art {
         box-shadow: 0 0 40px rgba(65,105,225,0.5);
         transition: transform 0.7s ease;
       }
@@ -140,15 +170,25 @@
       <p>Listen to "Christmas4You" by CDVerse — music, energy, and the movement you can feel.</p>
     </section>
 
+    <!-- CYW / Lifestyle Section -->
     <section id="cyw" class="py-16 px-6 text-center">
       <h2 class="text-3xl font-bold mb-6">Create Your World</h2>
-      <p class="mb-6">
-        CDVerse is more than music — it’s a movement. Explore basketball, sports, and creative projects that define our lifestyle.
-      </p>
+      <p class="mb-6">CDVerse is more than music — it’s a movement. Explore basketball, sports, and creative projects that define our lifestyle.</p>
       <div class="flex flex-wrap justify-center gap-8">
-        <img src="assets/CDVerse_Sports.png" alt="Basketball" class="section-img"/>
-        <img src="assets/cyw.1.jpg" alt="Music & Releases" class="section-img"/>
-        <img src="assets/CYW.png" alt="Lifestyle" class="section-img"/>
+          <div class="section-card w-48 sm:w-56 md:w-64">
+            <img src="assets/CDVerse_Sports.png" alt="Basketball" class="section-img" />
+            <div class="section-label">Basketball</div>
+          </div>
+
+          <div class="section-card w-48 sm:w-56 md:w-64">
+            <img src="assets/cyw.1.jpg" alt="Music & Releases" class="section-img" />
+            <div class="section-label">Music & Releases</div>
+          </div>
+
+          <div class="section-card w-36 sm:w-40 md:w-44 small">
+            <img src="assets/CYW.png" alt="Lifestyle" class="section-img" />
+            <div class="section-label">Lifestyle</div>
+          </div>
       </div>
     </section>
 
